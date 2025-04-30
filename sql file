@@ -73,8 +73,8 @@ ORDER BY payment_month;
 
 | Order ID | Customer ID | Order Date | Order Amount | Order Status | Payment ID | Payment Date | Payment Amount | Payment Method | Payment Status | Payment Successful | Amount Difference | Days to Payment |
 |----------|-------------|------------|--------------|--------------|------------|--------------|----------------|----------------|----------------|--------------------|-------------------|-----------------|
-| d27d81... | 2824       | 2023-05-28 | 22.26         | pending     | 63c7d8...  | 2023-11-08   | 5.23           | credit card    | pending        | No                 | 17.03             | 164             |
-| d27d81... | 2824       | 2023-05-28 | 22.26         | pending     | de20fe...  | 2024-11-28   | 430.17         | bank transfer  | failed         | No                 | -407.91           | 550             |
-| d27d81... | 2824       | 2023-05-28 | 22.26         | pending     | 43ddb9...  | 2020-03-16   | 382.46         | bank transfer  | failed         | No                 | -360.20           | -1168           |
-| 31d3bf... | 5012       | 2022-05-23 | 119.37        | delivered   | fbc581...  | 2022-02-06   | 351.20         | credit card    | completed      | Yes                | -231.83           | -106            |
-| 31d3bf... | 5012       | 2022-05-23 | 119.37        | delivered   | 1ffce4...  | 2020-07-02   | 99.08          | paypal         | failed         | No                 | 20.29             | -690            |
+| d27d81...| 2824        | 2023-05-28 | 22.26        | pending      | 63c7d8...  | 2023-11-08   | 5.23           | credit card    | pending        | No                 | 17.03             | 164             |
+| d27d81...| 2824        | 2023-05-28 | 22.26        | pending      | de20fe...  | 2024-11-28   | 430.17         | bank transfer  | failed         | No                 | -407.91           | 550             |
+| d27d81...| 2824        | 2023-05-28 | 22.26        | pending      | 43ddb9...  | 2020-03-16   | 382.46         | bank transfer  | failed         | No                 | -360.20           | -1168           |
+| 31d3bf...| 5012        | 2022-05-23 | 119.37       | delivered    | fbc581...  | 2022-02-06   | 351.20         | credit card    | completed      | Yes                | -231.83           | -106            |
+| 31d3bf...| 5012        | 2022-05-23 | 119.37       | delivered    | 1ffce4...  | 2020-07-02   | 99.08          | paypal         | failed         | No                 | 20.29             | -690            |
