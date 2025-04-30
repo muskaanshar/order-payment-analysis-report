@@ -1,1 +1,80 @@
+1. Order and Sales Analysis
+# Order Status Distribution
+SELECT order_status, COUNT(*) AS order_count
+FROM orders
+GROUP BY order_status;
 
+# Monthly Sales Trends
+SELECT 
+    DATE_TRUNC('month', order_date) AS order_month,
+    SUM(order_amount) AS total_sales
+FROM orders
+GROUP BY order_month
+ORDER BY order_month;
+
+# Revenue by Order Status
+SELECT order_status, SUM(order_amount) AS total_revenue
+FROM orders
+GROUP BY order_status
+ORDER BY total_revenue DESC;
+
+2. Customer Analysis
+# Repeat Customers
+SELECT COUNT(*) AS repeat_customers
+FROM (
+    SELECT customer_id
+    FROM orders
+    GROUP BY customer_id
+    HAVING COUNT(order_id) > 1
+) AS repeat_customers;
+
+# Total Unique Customers
+SELECT COUNT(DISTINCT customer_id) AS total_customers
+FROM orders;
+
+# Customer Segmentation by Order Count
+SELECT order_count, COUNT(*) AS customer_count
+FROM (
+    SELECT customer_id, COUNT(order_id) AS order_count
+    FROM orders
+    GROUP BY customer_id
+) AS customer_orders
+GROUP BY order_count
+ORDER BY order_count;
+
+# Monthly Active Customers
+SELECT 
+    customer_id,
+    DATE_TRUNC('month', order_date) AS active_month
+FROM orders
+GROUP BY customer_id, active_month;
+
+3. Payment Status Analysis
+# Payment Status Distribution
+SELECT payment_status, COUNT(*) AS payment_count
+FROM payments
+GROUP BY payment_status;
+
+# Payment Failure Rate
+SELECT 
+    ROUND(100.0 * SUM(CASE WHEN payment_status = 'failed' THEN 1 ELSE 0 END) / COUNT(*), 2) AS failure_rate_percentage
+FROM payments;
+
+# Monthly Payment Status Trends
+SELECT 
+    DATE_TRUNC('month', payment_date) AS payment_month,
+    payment_status,
+    COUNT(*) AS count
+FROM payments
+GROUP BY payment_month, payment_status
+ORDER BY payment_month;
+
+4. Order Details Report
+
+| Order ID | Customer ID | Order Date | Order Amount | Order Status | Payment ID | Payment Date | Payment Amount | Payment Method | Payment Status | Payment Successful | Amount Difference | Days to Payment |
+|----------|-------------|------------|--------------|--------------|------------|--------------|----------------|----------------|----------------|--------------------|-------------------|-----------------|
+| d27d81... | 2824       | 2023-05-28 | 22.26         | pending     | 63c7d8...  | 2023-11-08   | 5.23           | credit card    | pending        | No                 | 17.03             | 164             |
+| d27d81... | 2824       | 2023-05-28 | 22.26         | pending     | de20fe...  | 2024-11-28   | 430.17         | bank transfer  | failed         | No                 | -407.91           | 550             |
+| d27d81... | 2824       | 2023-05-28 | 22.26         | pending     | 43ddb9...  | 2020-03-16   | 382.46         | bank transfer  | failed         | No                 | -360.20           | -1168           |
+| 31d3bf... | 5012       | 2022-05-23 | 119.37        | delivered   | fbc581...  | 2022-02-06   | 351.20         | credit card    | completed      | Yes                | -231.83           | -106            |
+| 31d3bf... | 5012       | 2022-05-23 | 119.37        | delivered   | 1ffce4...  | 2020-07-02   | 99.08          | paypal         | failed         | No                 | 20.29             | -690            |
