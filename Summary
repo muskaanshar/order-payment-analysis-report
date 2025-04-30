@@ -1,1 +1,57 @@
+1. 🔍 Order and Sales Analysis
+Key Insights:
 
+Revenue Trends: Sales are uneven across months. Some months showed spikes in revenue likely due to promotional periods or increased customer acquisition.
+
+Order Status Distribution: A significant number of orders were in the "pending" or "shipped" status, with fewer reaching "delivered." This may point to a bottleneck in fulfillment or confirmation.
+
+Average Order Amount: The average order value remained relatively stable, indicating consistent customer purchasing patterns.
+
+2. 👤 Customer Analysis
+Key Insights:
+
+Repeat Customers: A notable number of customers made more than one purchase, suggesting a decent level of loyalty.
+
+Customer Segments: Customers could be grouped into:
+
+One-time buyers
+
+Repeat buyers (2–4 times)
+
+Loyal customers (5+ orders)
+
+Ordering Behavior Over Time: Customer engagement dropped for some cohorts, which may warrant re-engagement campaigns.
+
+3. 💳 Payment Status Analysis
+Key Insights:
+
+Success Rate: A large portion of payments were successful (completed), but a non-trivial amount were pending or failed, indicating friction in the payment process.
+
+By Payment Method: Bank transfers had a slightly higher failure rate compared to credit cards and PayPal, possibly due to manual verification or user error.
+
+Revenue Leakage: A significant gap between order amount and actual payment collected in some cases highlighted lost revenue due to failed or delayed payments.
+
+4. 📑 Order Details Report
+Key Observations:
+
+Mismatch Detection: Some orders had mismatched amounts between the order and the payment received, and some payments were made well after the order date.
+
+Fulfillment Gaps: Orders marked as "pending" with no associated payment or very delayed payment suggest issues in customer follow-up or system triggers.
+
+5. 📈 Customer Retention Analysis
+Key Observations:
+
+Cohort Behavior: Each monthly cohort shows a clear drop-off in retention over time. For example, only ~30–40% of customers from a given cohort returned in the second month.
+
+Retention Trends: Retention is strongest within the first 1–2 months. After that, most customers do not return unless re-engaged.
+
+Improvement Areas: Retention programs (emails, loyalty perks) could target customers within the first 2 months post-purchase to increase return likelihood.
+
+✅ Overall Recommendations:
+Improve payment processing and reduce failure rates.
+
+Focus marketing and support efforts on converting "pending" orders.
+
+Launch retention campaigns targeted at customers in their first 60 days.
+
+Consider reviewing product or fulfillment issues contributing to order drop-offs.
